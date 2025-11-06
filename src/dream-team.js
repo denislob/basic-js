@@ -14,7 +14,7 @@ const { NotImplementedError } = require('../lib');
  *
  */
 function createDreamTeam(members) {
-  if (!members) return false;
+  if (!Array.isArray(members)) return false;
   let dreamTeam = [];
   for (let i = 0; i < members.length; i++) {
     if (typeof members[i] === 'string') {
